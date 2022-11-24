@@ -62,6 +62,7 @@ ifeq ($(lang),cpp)
 
 else ifeq ($(lang),python)
 	timeout 1.0s $(EXECUTE)
+	cat data.out
 else
 endif
 
