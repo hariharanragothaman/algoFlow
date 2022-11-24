@@ -39,3 +39,9 @@ print(small_after_update)
 # Print the smallest element of the heap without popping it
 e = A[0]
 print(A, e)
+
+# Getting the top 'n' smallest or largest
+marks = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+top_three_largest = heapq.nlargest(3, marks)
+print(top_three_largest)
+top_three_smallest = heapq.nsmallest(3, marks)
