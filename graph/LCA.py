@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class RangeQuery:
     def __init__(self, data, func=min):
         self.func = func
@@ -12,7 +13,9 @@ class RangeQuery:
 
     def query(self, begin, end):
         depth = (end - begin).bit_length() - 1
-        return self.func(self._data[depth][begin], self._data[depth][end - (1 << depth)])
+        return self.func(
+            self._data[depth][begin], self._data[depth][end - (1 << depth)]
+        )
 
 
 class LCA:
