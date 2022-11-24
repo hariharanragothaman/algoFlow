@@ -7,14 +7,14 @@ print(A)
 n = len(A)
 
 # Creating a difference array
-diff = [0] * (n+2)
+diff = [0] * (n + 2)
 print(diff)
 
 for i in range(n):
     if i == 0:
         diff[i] = A[i]
     else:
-        diff[i] = A[i] - A[i-1]
+        diff[i] = A[i] - A[i - 1]
 
 print("The difference aray is:")
 print(diff)
@@ -35,7 +35,7 @@ R = 3
 X = 5
 
 diff[L] += X
-diff[R+1] -= X
+diff[R + 1] -= X
 
 print("The updated difference array is:")
 print(diff)
@@ -47,7 +47,7 @@ for i in range(n):
     if i == 0:
         A[i] = diff[i]
     else:
-        A[i] = diff[i] + A[i-1]
+        A[i] = diff[i] + A[i - 1]
 
 print("The updated array after querying is:")
 print(A)

@@ -15,7 +15,7 @@ class RMQMAX:  # for MAX queries
         # self.lookup=[[0 for _ in range(K+1)] for __ in range(MAXN)]
         self.lookup = [0] * ((K + 1) * MAXN)
         self.M = (
-                K + 1
+            K + 1
         )  # number of columns in self.lookup. To do calculations for self.lookup when converted from 2D to 1D
         self.buildSparseTable()
 
