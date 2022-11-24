@@ -81,6 +81,7 @@
 #include <unordered_set>
 #endif
 
+#include <sys/stat.h>
 using namespace std;
 
 ifstream  i_data("data.in");
