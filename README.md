@@ -1,6 +1,28 @@
 # algoFlow
 Code Snippets for Problem Solving in C++ and Python
 
+## Repository Structure
+1. Algorithm Templates
+2. Data Structures 
+3. Graph
+4. Libraries
+5. Math
+6. Strings
+7. Test Problems
+
+### Data Strutures
+1. This folder is divided into 2 parts, Basic & Advanced.
+2. Basic: It contains commonly used functions / implementations of these basic structures.
+3. Advanced: It contains implementations of these datstructures 
+
+### Graph
+Implementations of Commonly used Graph Theory Algorithms 
+
+### Strings
+Implementation of String Algorithms & some code snippets
+
+### Math   
+Implementation of frequently used math operations.
 
 ### Things to Add
 
