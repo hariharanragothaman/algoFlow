@@ -10,7 +10,12 @@ Code Snippets for Problem Solving in C++ and Python
 6. Strings
 7. Test Problems
 
-### Data Strutures
+### Algo Templates
+1. The purpose of this folder is to house pseudo-code for some common algorithm idea implementations.
+
+
+
+### Data Structures
 1. This folder is divided into 2 parts, Basic & Advanced.
 2. Basic: It contains commonly used functions / implementations of these basic structures.
 3. Advanced: It contains implementations of these datstructures 
