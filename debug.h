@@ -84,11 +84,12 @@
 #include <sys/stat.h>
 using namespace std;
 
+/*
 ifstream  i_data("data.in");
 ofstream  o_data("data.out");
 #define cin  i_data
 #define cout o_data
-
+*/
 
 /*
  *  FUNCTIONS FOR DEBUGGING
