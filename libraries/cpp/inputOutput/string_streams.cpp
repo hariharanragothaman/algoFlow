@@ -7,8 +7,15 @@ using namespace std;
  *  String streams and file streams enable strings and files to interact with the stream directly.
  *  String streams need the header <sstream>.
  *  They are not connected to an input or output stream and store their data in a string.
+ *
+ *  >> - input
+ *  << - output
  */
 
+
+/*
+ *  T ret -> int ret; template semantics
+ */
 template < class T >
 T StringTo ( const std::string& source )
 {
