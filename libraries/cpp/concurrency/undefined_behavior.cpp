@@ -13,6 +13,7 @@ public:
 
     void operator() (int k)
     {
+        cout << "The values of i & k are:"  << k << " " << i << endl;
         for (unsigned int j=0; j<= 5; ++j)
         {
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
@@ -25,7 +26,6 @@ public:
 
 int main()
 {
-    std::cout << std::endl;
     int valSleeper = 1000;
     std::thread t(Sleeper(valSleeper), 5);
     //t.detach();
