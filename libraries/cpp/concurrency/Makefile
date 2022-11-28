@@ -57,7 +57,7 @@ endif
 .PHONY: run
 run: build
 ifeq ($(lang),cpp)
-	timeout 1.0s $(EXECUTE)
+	$(EXECUTE)
 
 else ifeq ($(lang),python)
 	timeout 1.0s $(EXECUTE)
