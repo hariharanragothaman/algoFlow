@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-#include "../../../debug.h"
+#include "../../../../debug.h"
 using namespace std;
 
 vector<int> get_subsegment_count(string s)
