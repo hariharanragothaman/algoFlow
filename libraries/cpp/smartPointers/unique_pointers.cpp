@@ -2,6 +2,22 @@
 #include "../../../debug.h"
 using namespace std;
 
+/*
+ * std::unique_ptr exclusively takes care of its resource.
+ * It automatically releases the resource if it goes out of scope.
+ * If there is no copy semantic required, it can be used in containers and algorithms of the Standard Template Library.
+ * std::unique_ptr is as cheap and fast as a raw pointer, if you use no special deleter.
+ *
+ * It has the following methods
+ *
+ *  get         Returns the pointer to the resource
+ *  get_deleter Returns the delete function
+ *  release     Returns a pointer to the resource and releases it.
+ *  reset       Resets the resource
+ *  swap        Swaps the resources
+ *
+ */
+
 struct MyInt
 {
     MyInt(int i):i_(i){}
