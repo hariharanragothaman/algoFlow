@@ -7,10 +7,6 @@ using namespace std;
  * The element is equal or greater than zero.
  */
 
-/*
- *
- *
- */
 
 int mex(vector<int> a)
 {
