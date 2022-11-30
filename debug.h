@@ -104,29 +104,23 @@ inline bool fileExists (const std::string& name)
 template<typename T>
 void debug(const T& msg)
 {
-    if(fileExists("data.in"))
-        cout << msg << endl;
+    cout << msg << endl;
 }
 
 void debug2()
 {
-    if(fileExists("data.in"))
-        cout << "---------------------------------" << endl;
+    cout << "---------------------------------" << endl;
 }
 
 void debug3()
 {
-    if(fileExists("data.in"))
-        cout << "*********************************" << endl;
+    cout << "*********************************" << endl;
 }
 
 template<typename T>
 void print(std::vector<T> const &v)
 {
-    if(fileExists("data.in"))
-    {
-        for (auto i: v)
-            cout << i << ' ';
-        cout << endl;
-    }
+    for (auto i: v)
+        cout << i << ' ';
+    cout << endl;
 }
