@@ -1,6 +1,10 @@
 #include "../debug.h"
 using namespace std;
 
+/*
+ *  Find shortest sub-array, that has value >= m
+ */
+
 void minSubArraySum(vector<int> A, int n, int m)
 {
     int left = 0;
