@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../../debug.h"
-using namespace std;
 
 int get_longest_continuous_segment(string& s, const char& c)
 {
