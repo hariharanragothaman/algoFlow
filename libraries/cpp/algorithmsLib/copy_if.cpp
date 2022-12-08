@@ -2,6 +2,7 @@
 
 /*
  *  Copy to another vector if the 'predicate' is true
+ *  Based on the predicate; we can easily filter the elements of 'A'
  */
 
 int main()
