@@ -1,6 +1,4 @@
-#!/usr/bin/env python
 from heapq import heappop, heappush
-
 
 def dijkstra(graph, start=0):
     n = len(graph)
@@ -11,11 +9,10 @@ def dijkstra(graph, start=0):
     while queue:
         path_len, v = heappop(queue)
         if path_len == dist[v]:
-            for w, edge_len in graph[v]:
-                if edge_len + path_len < dist[w]:
-                    dist[w], parents[w] = edge_len + path_len, v
-                    heappush(queue, (edge_len + path_len, w))
-
+            for nei, edge_len in graph[v]:
+                if edge_len + path_len < dist[nei]:
+                    dist[nei], parents[nei] = edge_len + path_len, v
+                    heappush(queue, (edge_len + path_len, nei))
     return dist, parents
 
 
