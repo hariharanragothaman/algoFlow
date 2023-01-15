@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
 /*
 	In STL heap in general is binary max heap
 	9 8 6 7 4 5 2 0 3 1
