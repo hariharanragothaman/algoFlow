@@ -2,12 +2,12 @@
 
 class DSU
 {
-private:
+public:
     int nodes;
     int components;
     vector<int> parent;
     vector<int> sizes;
-public:
+
     DSU(int n)
     {
         nodes = n;
@@ -33,7 +33,7 @@ public:
 
     int size(int node)
     {
-        return -parent[get[node]];
+        return sizes[get(node)];
     }
 
     bool unite(int node1, int node2)
@@ -50,7 +50,7 @@ public:
             return false;
         else if (node1 != node2)
         {
-            if(sizes[node1] < sizes[node2])
+            if(sizes[node2] < sizes[node1])
                 swap(node1, node2);
             parent[node2] = node1;
             sizes[node1] += sizes[node2];

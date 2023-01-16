@@ -1,3 +1,7 @@
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize("unroll-loops")
+#pragma GCC optimize("inline")
+
 #include <cctype>
 #include <cerrno>
 #include <cfloat>
