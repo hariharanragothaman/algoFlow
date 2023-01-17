@@ -113,12 +113,12 @@ void debug(const T& msg)
 
 void debug2()
 {
-    cout << "---------------------------------" << endl;
+    cout << string(25, '-') << endl;
 }
 
 void debug3()
 {
-    cout << "*********************************" << endl;
+    cout <<  string(25, '*') << endl;
 }
 
 template<typename T>
