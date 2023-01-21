@@ -27,6 +27,7 @@ vector<vector<int>> getNeighbours(int r, int c, int R, int C)
 {
     vector<vector<int>> neighbours;
     vector<vector<int>> adj = {{-1, 0}, {0, -1},{1, 0}, {0, 1}};
+
     for(int i=0; i<4; i++)
     {
         int nr = adj[i][0] + r;

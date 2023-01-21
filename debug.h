@@ -1,3 +1,7 @@
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize("unroll-loops")
+#pragma GCC optimize("inline")
+
 #include <cctype>
 #include <cerrno>
 #include <cfloat>
@@ -109,12 +113,12 @@ void debug(const T& msg)
 
 void debug2()
 {
-    cout << "---------------------------------" << endl;
+    cout << string(25, '-') << endl;
 }
 
 void debug3()
 {
-    cout << "*********************************" << endl;
+    cout <<  string(25, '*') << endl;
 }
 
 template<typename T>
