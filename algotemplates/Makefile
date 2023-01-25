@@ -58,11 +58,9 @@ endif
 run: build
 ifeq ($(lang),cpp)
 	timeout 1.0s $(EXECUTE)
-	cat data.out
 
 else ifeq ($(lang),python)
 	timeout 1.0s $(EXECUTE)
-	cat data.out
 else
 endif
 
