@@ -10,5 +10,7 @@ int main()
 
     // Now how to do this in O(1) time
     vector<int> v {123, 456, 789, 100, 200};
+    quick_remove_at(v, 2);
 
+    return 0;
 }
