@@ -121,10 +121,30 @@ void debug3()
     cout <<  string(25, '*') << endl;
 }
 
-template<typename T>
+template <typename T>
 void print(std::vector<T> const &v)
 {
     for (auto i: v)
         cout << i << ' ';
     cout << endl;
+}
+
+template <typename T>
+void quick_remove_at(vector<T> &A, typename vector::iterator it)
+{
+    if(it != end(A))
+    {
+        *it = move(A.back());
+        A.pop_back();
+    }
+}
+
+template <typename T>
+void quick_remove_at(std::vector<T> &A, std::size_t idx)
+{
+    if (idx < A.size())
+    {
+        A[idx] = std::move(A.back());
+        A.pop_back();
+    }
 }
