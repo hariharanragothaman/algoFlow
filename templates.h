@@ -23,7 +23,7 @@ void quick_remove_at(vector<T>& A, int idx)
 template<typename T>
 void quick_remove_at(vector<T>& A, typename std::vector<T>::iterator it)
 {
-    if(it! end(A))
+    if(it != end(A))
     {
         *it = move(A.back());
         A.pop_back();
