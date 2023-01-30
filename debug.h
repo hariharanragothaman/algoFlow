@@ -130,7 +130,7 @@ void print(std::vector<T> const &v)
 }
 
 template <typename T>
-void quick_remove_at(vector<T> &A, typename vector::iterator it)
+void quick_remove_at(vector<T> &A, typename vector<T> ::iterator it)
 {
     if(it != end(A))
     {
