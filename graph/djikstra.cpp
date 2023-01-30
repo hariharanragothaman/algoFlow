@@ -1,7 +1,4 @@
-#include "bits/stdc++.h"
 #include "../debug.h"
-using namespace std;
-
 
 void dijkstra(int start, vector<pair<int, long long>>* edges, long long *arr, int n, bool* visited, int* parent)
 {
