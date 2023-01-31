@@ -1,5 +1,4 @@
 #include "../debug.h"
-using namespace std;
 
 /*
  * Given an array A of size N; find the minimal element that is not present in the array
