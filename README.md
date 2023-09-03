@@ -13,12 +13,10 @@ Code Snippets for Problem-Solving in C++ and Python
 ### Algo Templates
 1. The purpose of this folder is to house pseudocode for some common algorithm idea implementations.
 
-
-
 ### Data Structures
-1. This folder is divided into 2 parts, Basic & Advanced.
+1. This folder is divided into 3 parts, Basic, Advanced and Adapters
 2. Basic: It contains commonly used functions / implementations of these basic structures.
-3. Advanced: It contains implementations of these datstructures 
+3. Advanced: It contains implementations of these datastructures 
 
 ### Graph
 Implementations of Commonly used Graph Theory Algorithms 
