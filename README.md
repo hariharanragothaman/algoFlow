@@ -1,5 +1,5 @@
 # algoFlow
-Code Snippets for Problem Solving in C++ and Python
+Code Snippets for Problem-Solving in C++ and Python
 
 ## Repository Structure
 1. Algorithm Templates
@@ -11,7 +11,7 @@ Code Snippets for Problem Solving in C++ and Python
 7. Test Problems
 
 ### Algo Templates
-1. The purpose of this folder is to house pseudo-code for some common algorithm idea implementations.
+1. The purpose of this folder is to house pseudocode for some common algorithm idea implementations.
 
 
 
