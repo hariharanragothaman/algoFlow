@@ -23,7 +23,7 @@ Implementations of Commonly used Graph Theory Algorithms
 
 ### Strings
 Implementation of String Algorithms & some code snippets
-1. (IsSubsequence)[https://github.com/hariharanragothaman/algoFlow/blob/main/strings/check_subsequence.py]
+1. [IsSubsequence](https://github.com/hariharanragothaman/algoFlow/blob/main/strings/check_subsequence.py)
 
 ### Math   
 Implementation of frequently used math operations.
