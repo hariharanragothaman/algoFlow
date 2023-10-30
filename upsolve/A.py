@@ -134,10 +134,10 @@ def solve():
 
 
 def main():
-    n = input()
-    A = input_as_array()
-    A.sort()
-    A[0] += 1
+    x, k = input_as_array()
+    """
+    smallest integer, greater than x whose sum is divisible by k
+    """
     
 
 if __name__ == "__main__":

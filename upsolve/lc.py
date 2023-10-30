@@ -19,7 +19,6 @@ from io import BytesIO, IOBase
 from functools import reduce
 from typing import *
 
-
 # FASTIO REGION
 BUFSIZE = 8192
 
@@ -50,19 +49,29 @@ def debug5(msg):
 
 
 class Solution:
-    def solve(self):
-        pass
+    def solve(self, A):
+        n = len(A)
+        for i in range(0, n):
+            for j
+
 
 
 if __name__ == "__main__":
+    if os.path.exists("data.in"):
+        sys.stdin = open("data.in", "r")
+        sys.stdout = open("data.out", "w")
+
     start_time = time.time()
     s = Solution()
 
     """
     I/P Section
     """
-
-    ans = s.solve()
+    A = [8, 6, 1, 5, 3]
+    ans = s.solve(A)
     print(ans)
 
-    print(f"Time Elapsed: {time.time() - start_time} seconds")
+    # If it's local - Print this O/P
+    if os.path.exists("data.in"):
+        print(f"Time Elapsed: {time.time() - start_time} seconds")
+        sys.stdout.close()
