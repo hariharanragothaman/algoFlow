@@ -1,4 +1,4 @@
-#include "../debug.h"
+#include "../../debug.h"
 
 /*
     Basically, when we see small constraints, and different combinations

@@ -1,4 +1,4 @@
-#include "../debug.h"
+#include "../../debug.h"
 using namespace std;
 
 void minSubArraySum(vector<int> A, int n)
