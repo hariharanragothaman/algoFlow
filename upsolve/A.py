@@ -14,17 +14,23 @@ from collections import deque, Counter, OrderedDict, defaultdict
 from heapq import nsmallest, nlargest, heapify, heappop, heappush, heapreplace
 from math import ceil, floor, log, log2, sqrt, gcd, factorial, pow, pi
 from bisect import bisect, bisect_left, bisect_right, insort, insort_left, insort_right
-from itertools import accumulate,permutations,combinations,combinations_with_replacement
+from itertools import (
+    accumulate,
+    permutations,
+    combinations,
+    combinations_with_replacement,
+)
 from io import BytesIO, IOBase
 from functools import reduce
 from typing import *
 
 
-
-#-------------------------------------------------
+# -------------------------------------------------
 #       ------------ FASTIO -------------
 
 BUFSIZE = 8192
+
+
 class FastIO(IOBase):
     newlines = 0
 
@@ -69,7 +75,6 @@ class IOWrapper(IOBase):
         self.readline = lambda: self.buffer.readline().decode("ascii")
 
 
-
 def print(*args, **kwargs):
     """Prints the values to a stream, or to sys.stdout by default."""
     sep, file = kwargs.pop("sep", " "), kwargs.pop("file", sys.stdout)
@@ -87,8 +92,9 @@ def print(*args, **kwargs):
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
-#-------------------------------------------------
+# -------------------------------------------------
 #     ------------ SORTED CONTAINERS -------------
+
 
 class SortedList:
     def __init__(self, iterable=[], _load=200):
@@ -96,7 +102,7 @@ class SortedList:
         values = sorted(iterable)
         self._len = _len = len(values)
         self._load = _load
-        self._lists = _lists = [values[i:i + _load] for i in range(0, _len, _load)]
+        self._lists = _lists = [values[i : i + _load] for i in range(0, _len, _load)]
         self._list_lens = [len(_list) for _list in _lists]
         self._mins = [_list[0] for _list in _lists]
         self._fen_tree = []
@@ -267,7 +273,7 @@ class SortedList:
         _len = self._len
         self.discard(value)
         if _len == self._len:
-            raise ValueError('{0!r} not in list'.format(value))
+            raise ValueError("{0!r} not in list".format(value))
 
     def pop(self, index=-1):
         """Remove and return value at `index` in sorted list."""
@@ -322,49 +328,93 @@ class SortedList:
 
     def __repr__(self):
         """Return string representation of sorted list."""
-        return 'SortedList({0})'.format(list(self))
+        return "SortedList({0})".format(list(self))
 
 
-
-
-#-------------------------------------------------
+# -------------------------------------------------
 # SOME GENERAL HELPER
 
 MOD = 1000000007
-#MOD=998244353
-alpha = 'abcdefghijklmnopqrstuvwxyz'
-abd={'a':0,'b':1,'c':2,'d':3,'e':4,'f':5,'g':6,'h':7,'i':8,'j':9,'k':10,'l':11,'m':12,'n':13,'o':14,'p':15,'q':16,'r':17,'s':18,'t':19,'u':20,'v':21,'w':22,'x':23,'y':24,'z':25}
+# MOD=998244353
+alpha = "abcdefghijklmnopqrstuvwxyz"
+abd = {
+    "a": 0,
+    "b": 1,
+    "c": 2,
+    "d": 3,
+    "e": 4,
+    "f": 5,
+    "g": 6,
+    "h": 7,
+    "i": 8,
+    "j": 9,
+    "k": 10,
+    "l": 11,
+    "m": 12,
+    "n": 13,
+    "o": 14,
+    "p": 15,
+    "q": 16,
+    "r": 17,
+    "s": 18,
+    "t": 19,
+    "u": 20,
+    "v": 21,
+    "w": 22,
+    "x": 23,
+    "y": 24,
+    "z": 25,
+}
 
-def copy2d(lst): return [x[:] for x in lst]   #Copy 2D list... Avoid Using Deepcopy
-def no_of_digits(num): return 0 if num <= 0 else int(log10(num)) + 1
-def powm(num, power, mod=M): return pow(num, power, mod)
-def isPowerOfTwo(x): return (x and (not(x & (x - 1))))
+
+def copy2d(lst):
+    return [x[:] for x in lst]  # Copy 2D list... Avoid Using Deepcopy
+
+
+def no_of_digits(num):
+    return 0 if num <= 0 else int(log10(num)) + 1
+
+
+def powm(num, power, mod=M):
+    return pow(num, power, mod)
+
+
+def isPowerOfTwo(x):
+    return x and (not (x & (x - 1)))
+
+
 def LSB(num):
     """Returns Least Significant Bit of a number (Rightmost bit) in O(1)"""
     return num & -num
 
+
 def MSB(num):
     """Returns Most Significant Bit of a number (Leftmost bit) in O(logN)"""
-    if num <= 0: return 0
-    ans = 1; num >>= 1
+    if num <= 0:
+        return 0
+    ans = 1
+    num >>= 1
     while num:
-        num >>= 1; ans <<= 1
+        num >>= 1
+        ans <<= 1
     return ans
+
 
 def gcd(x, y):
     while y:
         x, y = y, x % y
     return x
 
+
 def lcm(x, y):
-    return (x*y)//gcd(x,y)
+    return (x * y) // gcd(x, y)
+
 
 def input_as_array():
     return list(map(int, input().split()))
 
 
-
-#-------------------------------------------------
+# -------------------------------------------------
 
 
 def debug():
@@ -394,13 +444,16 @@ def debug5(msg):
 
 start_time = time.time()
 
-#-------------------------------------------------
+# -------------------------------------------------
+
 
 def solve():
     pass
 
+
 def main():
     pass
+
 
 if __name__ == "__main__":
     if os.path.exists("data.in"):
