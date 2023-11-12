@@ -375,7 +375,7 @@ def no_of_digits(num):
     return 0 if num <= 0 else int(log10(num)) + 1
 
 
-def powm(num, power, mod=M):
+def powm(num, power, mod=MOD):
     return pow(num, power, mod)
 
 
@@ -447,12 +447,38 @@ start_time = time.time()
 # -------------------------------------------------
 
 
-def solve():
-    pass
+def solve(G, n):
+    root = 1
+    post_order = []
+
+    if root is None:
+        return post_order
+
+    stack = [root]
+    while stack:
+        node = stack.pop()
+        if node:
+            post_order.append(node)
+            stack += G[node]
+    post_order = post_order[::-1]
+    ans = [0] * (n+1)
+
+    for node in post_order:
+        ans[node] += len(G[node])
+        for child in G[node]:
+            ans[node] += ans[child]
+
+    print(*ans[1:])
+
 
 
 def main():
-    pass
+    n = int(input())
+    A = input_as_array()
+    G = defaultdict(list)
+    for child, parent in enumerate(A, 2):
+        G[parent].append(child)
+    solve(G, n)
 
 
 if __name__ == "__main__":
