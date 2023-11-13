@@ -1,6 +1,13 @@
 from typing import List
 
 
+class TreeNode:
+    def __init__(self, value, left=None, right=None):
+        self.val = value
+        self.left = left
+        self.right = right
+
+
 def postorder_traversal(root: TreeNode) -> List[int]:
     result = []
     if root is None:
