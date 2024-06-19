@@ -85,7 +85,7 @@ void quick_remove_at(std::vector<T> &A, std::size_t idx)
 
 void solve()
 {
-
+    debug("Hello World");
 }
 
 int32_t main()

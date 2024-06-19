@@ -50,10 +50,7 @@ def debug5(msg):
 
 class Solution:
     def solve(self, A):
-        n = len(A)
-        for i in range(0, n):
-            for j
-
+        pass
 
 
 if __name__ == "__main__":
