@@ -3,8 +3,16 @@ set(CMAKE_CXX_STANDARD 20)
 project(algoflow)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -O2 -Wall -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -Wno-unused-result -Wno-sign-conversion")
 
-add_subdirectory(algoFlow/graph/)
 
-add_subdirectory(contest/)
+# Find all *.cpp files in the project directory and its subdirectories
+file(GLOB_RECURSE SOURCES ${CMAKE_SOURCE_DIR}/*.cpp)
 
-add_subdirectory(cses)
+# Loop through each source file and create an executable
+foreach(SOURCE_FILE ${SOURCES})
+    # Get the file name without the extension
+    get_filename_component(TARGET_NAME ${SOURCE_FILE} NAME_WE)
+    # Create the executable
+    add_executable(${TARGET_NAME} ${SOURCE_FILE})
+    # Set the output directory for the executable
+    set_target_properties(${TARGET_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/output)
+endforeach()
