@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-#include "../../debug.h"
+#include "../debug.h"
 using namespace std;
 
 const std::pair<int, int> moves[] = {{-1, 0}, {0, -1}, {0, 1}, {1, 0}};

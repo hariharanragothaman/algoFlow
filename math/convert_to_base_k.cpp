@@ -1,4 +1,4 @@
-#include "../../debug.h"
+#include "../debug.h"
 string toBaseK(int n, int k)
 {
     string res = "";

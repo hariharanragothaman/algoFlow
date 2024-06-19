@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-#include "../../debug.h"
+#include "../debug.h"
 using namespace std;
 
 int binpow( int a, int n)

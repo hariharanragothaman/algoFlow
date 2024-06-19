@@ -1,4 +1,4 @@
-#include "../../debug.h"
+#include "../debug.h"
 
 vector<int> primeFactors(int n)
 {
