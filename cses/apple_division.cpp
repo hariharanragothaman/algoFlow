@@ -45,7 +45,7 @@ void debug(const T& msg)
 void debug2()
 {
     if(fileExists("data.in"))
-        cout << "---------------------------------" << endl;
+        cout << string(25, '-') << endl;
 }
 
 

@@ -45,37 +45,46 @@ void debug(const T& msg)
 void debug2()
 {
     if(fileExists("data.in"))
-        cout << "---------------------------------" << endl;
+        cout << string(25, '-') << endl;
 }
 
-int cnt = 0;
 
-void recurse(int S, int E)
+void debug3()
 {
-    if(S == E)
+    cout <<  string(25, '*') << endl;
+}
+
+template <typename T>
+void print(std::vector<T> const &v)
+{
+    for (auto i: v)
+        cout << i << ' ';
+    cout << endl;
+}
+
+template <typename T>
+void quick_remove_at(vector<T> &A, typename vector<T> ::iterator it)
+{
+    if(it != end(A))
     {
-        cnt++;
-        return;
+        *it = move(A.back());
+        A.pop_back();
     }
-    else if(S > E)
+}
+
+template <typename T>
+void quick_remove_at(std::vector<T> &A, std::size_t idx)
+{
+    if (idx < A.size())
     {
-        return;
-    }
-    else
-    {
-        recurse(S+1, E);
-        recurse(S+2, E);
-        recurse(S+3, E);
+        A[idx] = std::move(A.back());
+        A.pop_back();
     }
 }
 
 
 void solve()
 {
-    int S, E;
-    cin >> S >> E;
-    recurse(S, E);
-    cout << cnt << endl;
 
 }
 
@@ -84,7 +93,8 @@ int32_t main()
     auto start = std::chrono::high_resolution_clock::now();
 
     FAST_IO();
-    int T = 1;
+    int T;
+    cin >> T;
     while(T--)
     {
         solve();
