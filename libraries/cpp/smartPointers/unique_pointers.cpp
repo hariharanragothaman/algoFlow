@@ -1,7 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
-
 /*
  * std::unique_ptr exclusively takes care of its resource.
  * It automatically releases the resource if it goes out of scope.

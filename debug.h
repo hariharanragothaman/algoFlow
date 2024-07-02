@@ -84,6 +84,40 @@
 #include <sys/stat.h>
 using namespace std;
 
+typedef pair<int, int> pii;
+typedef vector< pii > vii;
+typedef vector<int> vi;
+typedef long long ll;
+
+template <typename T>
+void print(std::vector<T> const &v)
+{
+    for (auto i: v)
+        cout << i << ' ';
+    cout << endl;
+}
+
+template <typename T>
+void quick_remove_at(vector<T> &A, typename vector<T> ::iterator it)
+{
+    if(it != end(A))
+    {
+        *it = move(A.back());
+        A.pop_back();
+    }
+}
+
+template <typename T>
+void quick_remove_at(std::vector<T> &A, std::size_t idx)
+{
+    if (idx < A.size())
+    {
+        A[idx] = std::move(A.back());
+        A.pop_back();
+    }
+}
+
+
 /*
 ifstream  i_data("data.in");
 ofstream  o_data("data.out");

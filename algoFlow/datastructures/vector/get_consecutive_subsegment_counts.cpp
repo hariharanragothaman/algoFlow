@@ -21,3 +21,8 @@ vector<int> get_subsegment_count(string s)
     tmp.push_back(cnt);
     return tmp;
 }
+
+int main()
+{
+    return 0;
+}

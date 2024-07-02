@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
 
 /*
  *  The function std::move, defined in the header <utility>,
@@ -55,5 +53,5 @@ int main()
     str2 = std::move(str1);
     std::cout << "After moving" << std::endl;
     std::cout << "str1: " << str1 << std::endl;
-    std::cout << "str2: " << str2 << "\n\n"
+    std::cout << "str2: " << str2 << "\n\n";
 }

@@ -1,7 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
-
 
 /*
  * The function std::forward, defined in the header <utility>,
@@ -18,12 +15,12 @@ using namespace std;
  * Your function template can accept an arbitrary number of arguments and forward them unchanged.
  */
 
-using std::initialiser_list;
+using std::initializer_list;
 
 struct MyData
 {
     MyData(int, double, char){};
-}
+};
 
 template <typename T, typename...  Args>
 T createT(Args&&... args)
@@ -38,4 +35,9 @@ std::string s= createT<std::string>("Only for testing.");
 MyData myData2= createT<MyData>(1, 3.19, 'a');
 
 typedef std::vector<int> IntVec;
-IntVec intVec= createT<IntVec>(initialiser_list<int>({1, 2, 3}));
+IntVec intVec= createT<IntVec>(initializer_list<int>({1, 2, 3}));
+
+int main()
+{
+    return 0;
+}

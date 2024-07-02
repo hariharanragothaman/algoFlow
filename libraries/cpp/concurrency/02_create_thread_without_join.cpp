@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
 
 /*
  * The lifetime of a created thread t ends with its callable unit.

@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../debug.h"
-using namespace std;
 
 class Solution {
 public:
@@ -80,3 +78,8 @@ public:
         return result;
     }
 };
+
+int main()
+{
+    return 0; 
+}

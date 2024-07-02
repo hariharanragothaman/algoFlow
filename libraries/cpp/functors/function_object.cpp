@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
 
 /*
  *  A function object, or functor, is any type that implements operator().

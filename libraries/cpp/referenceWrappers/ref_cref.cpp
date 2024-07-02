@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
 
 /*
  * A reference wrapper is a copy-constructible and copy-assignable wrapper for a object of type&,

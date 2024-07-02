@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
 
 /*
  *  Challenge of detach()
@@ -51,3 +49,5 @@ public:
     scoped_thread(scoped_thread&)= delete;
     scoped_thread& operator=(scoped_thread const &)= delete;
 };
+
+int main() { return 0; }

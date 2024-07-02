@@ -2,11 +2,11 @@
 
 void dijkstra(int start, vector<pair<int, long long>>* edges, long long *arr, int n, bool* visited, int* parent)
 {
-    set<pair<ll, int>> s;
-    s.insert({ll(0), 0});
+    set<pair<long long, int>> s;
+    s.insert({0, 0});
     while (!s.empty())
     {
-        pair<ll, int> top = *s.begin();
+        pair<long long, int> top = *s.begin();
         int element = top.second;
         visited[element] = true;
         int distance = top.first;
@@ -22,9 +22,9 @@ void dijkstra(int start, vector<pair<int, long long>>* edges, long long *arr, in
                 auto f = s.find({arr[edges[element][i].first], edges[element][i].first});
                 if (f != s.end())
                     s.erase(f);
-                s.insert({distance + edges[element][i].ss, edges[element][i].ff});
-                arr[edges[element][i].ff] = distance + edges[element][i].ss;
-                parent[edges[element][i].ff] = element;
+                s.insert({distance + edges[element][i].second, edges[element][i].first});
+                arr[edges[element][i].first] = distance + edges[element][i].second;
+                parent[edges[element][i].first] = element;
             }
         }
     }

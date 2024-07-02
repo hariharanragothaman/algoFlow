@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
 
 /*
  * By using the keyword thread_local, you have thread local data also known as thread local storage.

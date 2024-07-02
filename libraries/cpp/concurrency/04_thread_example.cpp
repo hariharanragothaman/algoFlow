@@ -1,6 +1,5 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
+
 
 void f1(int n)
 {

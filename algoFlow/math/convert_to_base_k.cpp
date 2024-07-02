@@ -1,4 +1,5 @@
 #include "../../debug.h"
+
 string toBaseK(int n, int k)
 {
     string res = "";
@@ -11,4 +12,9 @@ string toBaseK(int n, int k)
     }
     reverse(res.begin(), res.end());
     return res;
+}
+
+int main()
+{
+    return 0;
 }

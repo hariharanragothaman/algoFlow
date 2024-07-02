@@ -1,11 +1,14 @@
-#include "bits/stdc++.h"
 #include "../../debug.h"
-using namespace std;
+
+typedef  pair<int, int> pii;
+typedef vector< pii > vii;
+typedef vector<int> vi;
 
 /* Get connected components in a graph */
 
 void get_connected_components(vector<vi>& g, int n)
 {
+    int components = 0;
     /* Creating the graph */
     map<int, set<int>> graph;
     for(auto c: g)

@@ -1,5 +1,5 @@
-#include <iostream>
-#include <vector>
+#include "../debug.h"
+
 
 /*
  *  Question: https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x

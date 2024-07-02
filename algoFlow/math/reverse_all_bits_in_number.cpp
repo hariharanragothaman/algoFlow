@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../debug.h"
-using namespace std;
 
 /*
 To clear any particular set of bits, you can use bitwise AND with the complement of a number that has 1s in those places.

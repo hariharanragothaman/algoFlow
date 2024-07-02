@@ -1,7 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
-
 /*
  * The usage of std::unique_lock is more expensive than the usage of std::lock_guard.
  * On the contrary, a std::unique_lock can be created with and without mutex,

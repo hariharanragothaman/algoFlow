@@ -1,5 +1,4 @@
 #include "../../debug.h"
-using namespace std;
 
 void basicGraph(vector<vi> &g)
 {

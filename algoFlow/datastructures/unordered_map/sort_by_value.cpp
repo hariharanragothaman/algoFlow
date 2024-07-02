@@ -2,7 +2,7 @@
 
 
 // Modify the functor here to for reverse=True functionality
-bool sort_by_value(const pair<char, int> &a, const pair<char, int> &b)
+bool sort_by_value2(const pair<char, int> &a, const pair<char, int> &b)
 {
     return (a.second < b.second);
 }
@@ -45,7 +45,7 @@ int main()
         vec.push_back(make_pair(elem.first, elem.second));
     }
 
-    sort(vec.begin(), vec.end(), sort_by_value);
+    sort(vec.begin(), vec.end(), sort_by_value2);
 
     cout << "Printing pairs after sorting by value" << endl;
     for(auto& it: vec)

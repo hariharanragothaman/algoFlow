@@ -1,5 +1,4 @@
 #include "../../../debug.h"
-using namespace std;
 
 /*
  *
@@ -23,9 +22,6 @@ using namespace std;
  *
  */
 
-#include "../../../debug.h"
-using namespace std;
-
 class Resource
 {
 public:
@@ -48,7 +44,7 @@ public:
 
 void someFunction()
 {
-    Resource *ptr new Resource();
+    Resource *ptr = new Resource();
 }
 
 int main()

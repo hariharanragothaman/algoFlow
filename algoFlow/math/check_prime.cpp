@@ -1,6 +1,5 @@
-#include "bits/stdc++.h"
 #include "../../debug.h"
-using namespace std;
+
 
 bool prime(int n)
 {

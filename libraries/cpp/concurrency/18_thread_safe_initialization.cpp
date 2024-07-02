@@ -1,7 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
-
 /*
  * If you don’t modify the data, it’s sufficient to initialize them in a thread-safe way.
  * C++ offers various ways to achieve this:

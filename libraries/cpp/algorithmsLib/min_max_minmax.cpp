@@ -1,7 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
-
 /*
  * The many variations of the min, max, and minmax functions apply to "values and initializer lists".
  */

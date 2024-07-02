@@ -1,7 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
-
 /*
  * A deadlock is a state in which two or more threads are blocked
  * because each thread waits for the release of a resource before it releases its resource.

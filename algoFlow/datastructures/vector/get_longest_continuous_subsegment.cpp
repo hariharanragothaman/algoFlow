@@ -22,3 +22,8 @@ bool checkZeroOnes(string s)
 {
     return get_longest_continuous_segment(s, '1') > get_longest_continuous_segment(s, '0');
 }
+
+int main()
+{
+    return 0;
+}

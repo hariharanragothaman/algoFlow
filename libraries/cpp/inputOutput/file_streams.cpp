@@ -1,7 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
-
 /*
  *  File streams used for reading and writing have to set the file position pointer after the contents change.
  *

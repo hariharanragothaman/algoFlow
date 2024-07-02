@@ -1,5 +1,6 @@
 #include "../debug.h"
 
+
 class Solution {
 public:
     string smallestSubsequence(string s)
@@ -44,3 +45,8 @@ public:
 
     }
 };
+
+int main()
+{
+    return 0;
+}

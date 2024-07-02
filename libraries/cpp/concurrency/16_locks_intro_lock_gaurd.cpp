@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
 
 /*
  * You should encapsulate a mutex in a lock to release the mutex automatically.

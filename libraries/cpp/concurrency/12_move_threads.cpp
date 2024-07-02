@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
 
 /*
  * By performing t2= std::move(t) thread t2 has the callable of thread t.

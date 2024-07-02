@@ -10,8 +10,8 @@ The mutable part tells the compiler to make the operator() non const as it is co
 */
 
 // Hence this becomes --->
-int init = 0
-auto lambda = [init]() mutable { return ++init;}
+int init = 0;
+//auto lambda = [init]() mutable { return ++init;};
 
 // ----->> This below
 
@@ -38,3 +38,8 @@ auto generate_lambda()
 /*
  * Will leave you with a dangling reference to foo when the function returns and using it is undefined behavior.
  */
+
+int main()
+{
+    return 0;
+}

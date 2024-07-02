@@ -10,4 +10,5 @@ int main()
      *   i   * (n-i+1)
      *   left   right
      */
+    return 0;
 }

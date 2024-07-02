@@ -15,3 +15,8 @@ int lengthOfLIS(vector<int>& nums)
     return rank.size();
 
 }
+
+int main()
+{
+    return 0;
+}

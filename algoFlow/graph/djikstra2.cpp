@@ -1,12 +1,7 @@
-#include "bits/stdc++.h"
 #include "../../debug.h"
-using namespace std;
-
 #define int long long
-using namespace std;
 
-typedef  pair<int, int> pii
-typedef vector< pii > vii;
+
 #define INF 1E18
 
 vii *G;
