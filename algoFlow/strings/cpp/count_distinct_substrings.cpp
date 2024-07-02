@@ -1,6 +1,4 @@
-#include <bits/stdc++.h>
 #include "../../../debug.h"
-using namespace std;
 
 int count_unique_substrings(string const& s) {
     int n = s.size();

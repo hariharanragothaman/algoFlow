@@ -2,6 +2,8 @@
  *  Please refer: https://leetcode.com/problems/koko-eating-bananas/description/
  */
 
+#include "../../../debug.h"
+
 class Solution
 {
 public:
@@ -42,3 +44,8 @@ public:
         return ans;
     }
 };
+
+int main()
+{
+    return 0;
+}

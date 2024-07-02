@@ -20,11 +20,4 @@ int main()
         if( current.size() >= 2 and is_sorted(current.begin(), current.end()))
             ans.insert(current);
     }
-
-
-    // Printing all the combinations
-    for(auto c: ans)
-    {
-        print(c);
-    }
 }

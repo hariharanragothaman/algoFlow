@@ -1,8 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
-
-#include "../headers.h"
 
 
 int main()

@@ -10,7 +10,6 @@
  * https://aryansh.gitbook.io/informatics-notes/binary-lifting/binary-lifting-gold-part-1
  */
 
-#include "bits/stdc++.h"
 #include "../../../debug.h"
 using namespace std;
 

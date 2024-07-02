@@ -1,6 +1,5 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
+
 /*
  * By default priority queue in C++ gets the maximum
  * To get minimum, the following ways can be used.

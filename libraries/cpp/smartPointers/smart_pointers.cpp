@@ -22,3 +22,37 @@ using namespace std;
  * Its job is it to break cycles of std::shared_ptr. It models the concept of temporary ownership.
  *
  */
+
+#include "../../../debug.h"
+using namespace std;
+
+class Resource
+{
+public:
+    Resource()
+    {
+        cout << "Constructor:: Resource Acquired" << endl;
+    }
+
+    ~Resource()
+    {
+        cout << "Destructor:: Resource Released" << endl;
+    }
+
+    void doSomething()
+    {
+        cout << "Resource is doing something" << endl;
+    }
+
+};
+
+void someFunction()
+{
+    Resource *ptr new Resource();
+}
+
+int main()
+{
+
+    return 0;
+}

@@ -51,3 +51,13 @@ Implementation of frequently used math operations.
 4. LCA using binary lifting
 5. LCA using euler tour
 6. LCA using segment tree
+
+
+```shell
+
+mkdir -p build
+cd build
+cmake ..
+cmake --build .
+ls ../output
+```

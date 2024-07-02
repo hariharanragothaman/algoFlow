@@ -1,4 +1,3 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
 
 // Definition for a binary tree node.
@@ -30,7 +29,7 @@ public:
         while(!q.empty())
         {
             result.push_back({});
-            int n = q.size(); // This line is very key - since - in C++ i we include it in the loop, it recomputes it
+            int n = static_cast<int>(q.size()); // This line is very key - since - in C++ i we include it in the loop, it recomputes it
 
             for(int i=0; i < n; i++)
             {

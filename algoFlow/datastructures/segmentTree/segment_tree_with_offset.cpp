@@ -1,6 +1,5 @@
-#include "bits/stdc++.h"
-#include "../debug.h"
-using namespace std;
+#include "../../../debug.h"
+
 
 /*
         Crux point 1:
@@ -127,3 +126,8 @@ public:
         return answer;
     }
 };
+
+int main()
+{
+    return 0;
+}

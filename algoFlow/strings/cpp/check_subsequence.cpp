@@ -1,6 +1,5 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
+
 
 // Check if s is a subsequence of t
 

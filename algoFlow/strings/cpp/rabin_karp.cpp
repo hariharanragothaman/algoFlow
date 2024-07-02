@@ -1,5 +1,4 @@
 #include "../../../debug.h"
-using namespace std;
 
 vector<int> rabin_karp(string const& s, string const& t)
 {

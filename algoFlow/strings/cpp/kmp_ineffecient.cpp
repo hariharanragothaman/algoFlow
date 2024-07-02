@@ -1,5 +1,4 @@
 #include "../../../debug.h"
-using namespace std;
 
 /*
  * The prefix function for this string is defined as

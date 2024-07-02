@@ -1,3 +1,5 @@
+#include "../../../debug.h"
+
 class TimeMap
 {
 private:
@@ -49,3 +51,7 @@ Debugger
  * obj->set(key,value,timestamp);
  * string param_2 = obj->get(key,timestamp);
  */
+int main()
+{
+    return 0;
+}

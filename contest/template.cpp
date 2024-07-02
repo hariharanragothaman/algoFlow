@@ -12,6 +12,9 @@
 
 */
 
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize("unroll-loops")
+#pragma GCC optimize("inline")
 
 #ifndef ONLINE_JUDGE
 #include "debug.h"
@@ -85,7 +88,8 @@ void quick_remove_at(std::vector<T> &A, std::size_t idx)
 
 void solve()
 {
-    debug("Hello World");
+    int a = 1, b = 2;
+    cout << a << b << endl;
 }
 
 int32_t main()

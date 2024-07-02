@@ -13,3 +13,8 @@ vector<vector<int>> get_neighbours(int& r, int& c, int& R, int& C)
     }
     return nei;
 }
+
+int main()
+{
+  return 0; 
+}

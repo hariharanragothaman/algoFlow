@@ -1,4 +1,4 @@
-l#include "../../debug.h"
+#include "../../../debug.h"
 using namespace std;
 
 /*
@@ -8,6 +8,7 @@ using namespace std;
 
 int find_position_basic(const vector<int> A, int x)
 {
+    int n = A.size();
     int l = 0;
     int r = (int)A.size() -1;                       // [l, r] is our search space
 

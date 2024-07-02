@@ -7,6 +7,7 @@ int start;
 
 int main()
 {
+    int n;
     queue<int> Q;
     vector<bool> visited(n);
     vector<int> D(n);

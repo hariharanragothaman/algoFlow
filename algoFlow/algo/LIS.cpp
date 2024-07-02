@@ -2,7 +2,7 @@
 
 int LIS(vector<int> A)
 {
-    int n = A.size();
+    int n = static_cast<int>(A.size());
     vector<int> DP(n, 1);
     for(int i=0; i<n; i++)
     {
@@ -13,4 +13,9 @@ int LIS(vector<int> A)
         }
     }
     return *max_element(DP.begin(), DP.end());
+}
+
+int main()
+{
+    return 0;
 }

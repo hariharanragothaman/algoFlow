@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
 #include "../../../debug.h"
-using namespace std;
 
 
 // Modify the functor here to for reverse=True functionality
@@ -46,6 +44,7 @@ int main()
     {
         vec.push_back(make_pair(elem.first, elem.second));
     }
+
     sort(vec.begin(), vec.end(), sort_by_value);
 
     cout << "Printing pairs after sorting by value" << endl;
@@ -54,4 +53,5 @@ int main()
         cout << it.first << it.second << endl;
     }
 
+    return 0;
 }

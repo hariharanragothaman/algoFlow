@@ -1,76 +1,89 @@
-#include "bits/stdc++.h"
+#include "../../../debug.h"
 using namespace std;
 
-void getDiameter(unordered_map<int, vector<int>>&g, int& nodes)
+// Refer: https://leetcode.com/problems/diameter-of-binary-tree/
+
+/*
+ * Definition for a binary tree node.
+ */
+
+struct TreeNode
 {
-    /* We need to do DFS twice */
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ };
 
-    deque<pair<int, int>> q;
-    q.emplace_back(make_pair(1, 0));
-    set<int> visited;
-    int current_max_length = 0;
-    pair<int, int> node_and_length;
-    int arbitrary_node = 1;
 
-    while(q.size() > 0)
+class Solution {
+public:
+    int diameterOfBinaryTree(TreeNode* root)
     {
-        node_and_length = q.back();
-        q.pop_back();
+        int max_length = 0, result = 0;
+        unordered_map<TreeNode*, vector<TreeNode*>> G;
 
-        visited.insert(node_and_length.first);
-        if(node_and_length.second > current_max_length)
+        TreeNode* current = root;
+
+        TreeNode* select;
+        deque<pair<TreeNode*, int>> Q, Q2;
+        Q.push_back({current, 0});
+
+        while(Q.size() > 0)
         {
-            current_max_length = node_and_length.second;
-            arbitrary_node = node_and_length.first;
+            auto [node, l] = Q.back();
+            Q.pop_back();
+
+            if(l > max_length)
+            {
+                max_length = l;
+                select = node;
+            }
+
+            int tmp = l + 1;
+            if(node->left)
+            {
+                Q.push_back({node->left, tmp});
+
+                /* Creating the graph */
+                G[node].push_back(node->left);
+                G[node->left].push_back(node);
+            }
+
+            if(node->right)
+            {
+                Q.push_back({node->right, tmp});
+
+                /* Creating the graph */
+                G[node].push_back(node->right);
+                G[node->right].push_back(node);
+            }
         }
 
-        for(auto child: g[node_and_length.first])
+        set<TreeNode*> V;
+        Q2.push_back({select, 0});
+
+        while(Q2.size() > 0)
         {
-            if (visited.find(child) == visited.end())
-                q.emplace_back(make_pair(child, node_and_length.second + 1));
+            auto [node, l] = Q2.back();
+            Q2.pop_back();
+            V.insert(node);
+            result = max(result, l);
+            int tmp = l + 1;
+            for(auto c: G[node])
+            {
+                if(find(V.begin(), V.end(), c) == V.end())
+                    Q2.push_back({c, tmp});
+            }
         }
+
+        return result;
     }
-
-    /* Doing DFS the second time */
-
-    deque<pair<int, int>> q2;
-    q2.emplace_back(make_pair(arbitrary_node, 0));
-    set<int> visited2;
-    int diameter_of_tree = 0;
-    pair<int, int> node_and_length2;
-
-    while(q2.size() > 0)
-    {
-        node_and_length2 = q2.back();
-        q2.pop_back();
-        visited2.insert(node_and_length2.first);
-
-        if(node_and_length2.second >= diameter_of_tree)
-            diameter_of_tree = node_and_length2.second;
-
-        for(auto child: g[node_and_length2.first])
-        {
-            if(visited2.find(child) == visited2.end())
-                q2.emplace_back(make_pair(child, node_and_length2.second + 1));
-        }
-    }
-    cout << diameter_of_tree << endl;
-}
+};
 
 int main()
 {
-    int nodes;
-    cin >> nodes;
-    int edges = nodes - 1;
-    int u, v;
-    unordered_map<int, vector<int>> g;
-    while(edges)
-    {
-        cin >> u >> v;
-        // The Tree is an undirected graph by definition
-        g[u].emplace_back(v);
-        g[v].emplace_back(u);
-        edges--;
-    }
-    getDiameter(g, nodes);
+    return 0;
 }

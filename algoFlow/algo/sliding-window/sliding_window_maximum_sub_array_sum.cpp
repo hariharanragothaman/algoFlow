@@ -23,3 +23,8 @@ void minSubArraySum(vector<int> A, int n)
 
     cout << maxSum << endl;
 }
+
+int main()
+{
+    return 0;
+}

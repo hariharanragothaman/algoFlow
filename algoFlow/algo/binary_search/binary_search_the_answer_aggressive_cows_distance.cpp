@@ -7,7 +7,7 @@
  *
  */
 #ifndef ONLINE_JUDGE
-#include "debug.h"
+#include "../../../debug.h"
 #else
 #include "bits/stdc++.h"
 #include <sys/stat.h>
@@ -17,6 +17,12 @@ using namespace std;
 #define FAST_IO() ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
 #define int long long
 #define endl '\n'
+
+inline bool fileExists (const std::string& name)
+{
+    struct stat buffer;
+    return (stat (name.c_str(), &buffer) == 0);
+}
 
 bool cost(vector<int> A, int n, int minDist, int c)
 {

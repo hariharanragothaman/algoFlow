@@ -6,9 +6,7 @@
  *
  */
 
-#include "bits/stdc++.h"
-#include "../debug.h"
-using namespace std;
+#include "../../../debug.h"
 
 class SegmentTree
 {

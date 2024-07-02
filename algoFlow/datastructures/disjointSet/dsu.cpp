@@ -64,3 +64,8 @@ public:
         return components;
     }
 };
+
+int main()
+{
+    return 0;
+}

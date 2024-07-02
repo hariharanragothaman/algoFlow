@@ -5,4 +5,5 @@ int main()
     vector<string> A {"some", "random", "words",
                       "without", "order", "aaa",
                       "yyy"};
+    return 0;
 }

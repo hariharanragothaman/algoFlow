@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
-#include "../debug.h"
-using namespace std;
+#include "../../../debug.h"
 
 class Node
 {
@@ -110,7 +108,7 @@ Node* middle_node(Node* head)
     return slow;
 }
 
-Node* reverseList(ListNode* head)
+Node* reverseList(Node* head)
 {
     Node* prev = nullptr;
     Node* current = head;
