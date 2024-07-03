@@ -2,6 +2,7 @@
  * Definition for a binary tree node.
  */
 
+#include "../../debug.h"
 
 struct TreeNode
 {
