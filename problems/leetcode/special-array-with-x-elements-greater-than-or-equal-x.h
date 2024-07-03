@@ -1,4 +1,4 @@
-#include "../debug.h"
+#include "../../debug.h"
 
 
 /*
@@ -61,8 +61,3 @@ public:
             return left;
     }
 };
-
-int main()
-{
-    return 0;
-}
