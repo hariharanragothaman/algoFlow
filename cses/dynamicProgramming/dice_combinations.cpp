@@ -14,7 +14,8 @@
 
 
 #ifndef ONLINE_JUDGE
-#include "../debug.h"
+#include "../../debug.h"
+
 #else
 #include "bits/stdc++.h"
 #include <sys/stat.h>
@@ -35,37 +36,26 @@ inline bool fileExists (const std::string& name)
     return (stat (name.c_str(), &buffer) == 0);
 }
 
-
 void solve()
 {
-    int n, x;
-    cin >> n >> x;
-    vector<int> coins;
-    int val;
-    for(int i=0; i<n; i++)
-    {
-        cin >> val;
-        coins.push_back(val);
-    }
 
-    vector<int> DP(x+1, 0);
+    int n;
+    cin >> n;
+    vector<int> DP(n+1, 0);
     DP[0] = 1;
+    DP[1] = 1;
 
-    for(int wei=0; wei<=x; wei++)
+    for(int i=2; i<n+1; i++)
     {
-        for(int i=1; i<=n; i++)
+        for(int j=1; j<7; j++)
         {
-            if(wei - coins[i-1] >= 0)
+            if(i-j >= 0)
             {
-                DP[wei] += DP[wei - coins[i-1]];
-                DP[wei] %= 1000000007;
+                DP[i] = (DP[i] + DP[i-j]) % (1000000007);
             }
         }
     }
-
-    int result = (DP[x] == 0) ? 0 : DP[x];
-    cout << result << endl;
-
+    cout << DP[n] << endl;
 }
 
 int32_t main()

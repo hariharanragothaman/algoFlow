@@ -14,7 +14,7 @@
 
 
 #ifndef ONLINE_JUDGE
-#include "../debug.h"
+#include "../../debug.h"
 #else
 #include "bits/stdc++.h"
 #include <sys/stat.h>
@@ -35,65 +35,37 @@ inline bool fileExists (const std::string& name)
     return (stat (name.c_str(), &buffer) == 0);
 }
 
-template<typename T>
-void debug(const T& msg)
-{
-    if(fileExists("data.in"))
-        cout << msg << endl;
-}
-
-void debug2()
-{
-    if(fileExists("data.in"))
-        cout << "---------------------------------" << endl;
-}
-
-void debug3()
-{
-    if(fileExists("data.in"))
-        cout << "*********************************" << endl;
-}
-
-template<typename T>
-void print(const T &v)
-{
-    if(fileExists("data.in"))
-    {
-        for(auto c: v)
-            cout << c << " ";
-        cout << endl;
-    }
-}
-
-void recurse(int n)
-{
-    if(n == 1)
-    {
-        cout << n << endl;
-        return;
-    }
-    else
-    {
-        if(n&1)
-        {
-            cout << n << " ";
-            n = 3*n+1;
-            recurse(n);
-        }
-        else
-        {
-            cout << n << " ";
-            n >>= 1;
-            recurse(n);
-        }
-    }
-}
 
 void solve()
 {
-    int n;
-    cin >> n;
-    recurse(n);
+    int n, x;
+    cin >> n >> x;
+    vector<int> coins;
+    int val;
+    for(int i=0; i<n; i++)
+    {
+        cin >> val;
+        coins.push_back(val);
+    }
+
+    vector<int> DP(x+1, 0);
+    DP[0] = 1;
+
+    for(int wei=0; wei<=x; wei++)
+    {
+        for(int i=1; i<=n; i++)
+        {
+            if(wei - coins[i-1] >= 0)
+            {
+                DP[wei] += DP[wei - coins[i-1]];
+                DP[wei] %= 1000000007;
+            }
+        }
+    }
+
+    int result = (DP[x] == 0) ? 0 : DP[x];
+    cout << result << endl;
+
 }
 
 int32_t main()
@@ -105,11 +77,12 @@ int32_t main()
     while(T--)
     {
         solve();
-        debug2();
+        if(fileExists("data.in"))
+            cout << string(25, '-') << endl;
     }
 
     auto stop = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
 
 #ifndef ONLINE_JUDGE
     if(fileExists("data.in"))

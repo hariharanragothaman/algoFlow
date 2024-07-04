@@ -14,7 +14,7 @@
 
 
 #ifndef ONLINE_JUDGE
-#include "../debug.h"
+#include "../../debug.h"
 #else
 #include "bits/stdc++.h"
 #include <sys/stat.h>
@@ -45,44 +45,55 @@ void debug(const T& msg)
 void debug2()
 {
     if(fileExists("data.in"))
-        cout << string(25, '-') << endl;
+        cout << "---------------------------------" << endl;
 }
 
+void debug3()
+{
+    if(fileExists("data.in"))
+        cout << "*********************************" << endl;
+}
+
+template<typename T>
+void print(const T &v)
+{
+    if(fileExists("data.in"))
+    {
+        for(auto c: v)
+            cout << c << " ";
+        cout << endl;
+    }
+}
+
+void recurse(int n)
+{
+    if(n == 1)
+    {
+        cout << n << endl;
+        return;
+    }
+    else
+    {
+        if(n&1)
+        {
+            cout << n << " ";
+            n = 3*n+1;
+            recurse(n);
+        }
+        else
+        {
+            cout << n << " ";
+            n >>= 1;
+            recurse(n);
+        }
+    }
+}
 
 void solve()
 {
     int n;
     cin >> n;
-    vector<int> A;
-    int val;
-    int total = 0;
-
-    for(int i=0; i<n; i++)
-    {
-        cin >> val;
-        total += val;
-        A.push_back(val);
-    }
-
-    int ans = INT32_MAX;
-
-    for(int msk=0; msk <(1<<n); msk++)
-    {
-        int current = 0;
-        for(int j=0; j<n; j++)
-        {
-            if(msk & (1<<j))
-            {
-                current += A[j];
-            }
-        }
-
-        int other = total - current;
-        int diff = abs(current - other);
-        ans = min(ans, diff);
-    }
-
-    cout << ans << endl;
+    recurse(n);
 }
 
 int32_t main()
@@ -98,7 +109,7 @@ int32_t main()
     }
 
     auto stop = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
 
 #ifndef ONLINE_JUDGE
     if(fileExists("data.in"))

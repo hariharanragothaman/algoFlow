@@ -14,7 +14,7 @@
 
 
 #ifndef ONLINE_JUDGE
-#include "../debug.h"
+#include "../../debug.h"
 
 #else
 #include "bits/stdc++.h"
@@ -40,43 +40,32 @@ void solve()
 {
     int n, x;
     cin >> n >> x;
-    set<int> S;
+    vector<int> coins;
     int val;
     for(int i=0; i<n; i++)
     {
         cin >> val;
-        S.insert(val);
+        coins.push_back(val);
     }
 
-    deque<pair<int, int>> Q;
-    for(auto c: S)
+//    print(coins);
+    vector<int> DP(x+1, INT_MAX);
+    DP[0] = 0;
+
+    for(int i=1; i<=n; i++)
     {
-        Q.push_back(make_pair(c, 1));
-    }
-
-    int ans = INT_MAX;
-    while(Q.size() > 0)
-    {
-        auto [value, cnt] = Q.back();
-        Q.pop_back();
-
-        if(value == x)
+        for(int wei=0; wei<=x; wei++)
         {
-            ans = min(ans, cnt);
-        }
-
-        for(auto c: S)
-        {
-            int tmp = value + c;
-            if(tmp <= x)
+            if(wei - coins[i-1] >= 0)
             {
-                Q.push_back(make_pair(tmp, cnt+1));
+                DP[wei] = min(DP[wei], DP[wei - coins[i-1]] + 1);
             }
         }
     }
 
-    int result = ans == INT_MAX ? -1 : ans;
+    int result = (DP[x] == INT_MAX) ? -1 : DP[x];
     cout << result << endl;
+
 }
 
 int32_t main()
