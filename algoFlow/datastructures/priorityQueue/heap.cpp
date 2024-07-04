@@ -13,9 +13,47 @@
  * The std::priority_queue knows its size, but did not support the comparison operator on their instances.
  */
 
+/*
+ *  Important:
+ *  Binary_heap uses vector<> as the default container.
+ *    // data-type, container, Comparator function
+    priority_queue< pair<int, int>, vector<pair<int, int>>, Compare> B;
+ *
+ */
+
+struct MinTop
+{
+    bool operator()(const int a, const int b)
+    {
+        return a > b;
+    }
+};
+
+struct MaxTop
+{
+    bool operator()(const int a, const int b)
+    {
+        return a < b;
+    }
+};
+
 
 int main()
 {
+    priority_queue<int, vector<int>, MinTop> PQ2;
+    PQ2.push(1);
+
+    while(!PQ2.empty())
+    {
+        cout << PQ2.top() << endl;
+        PQ2.pop();
+    }
+
+    /*
+     * This is equivalent of priority_queue<int, vector<int>, less> pq;
+     * (or) in this case, MaxTop()
+     *
+     */
     priority_queue<int> pq;
 
     pq.emplace(5);
