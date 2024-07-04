@@ -41,13 +41,18 @@ struct MaxTop
 int main()
 {
     priority_queue<int, vector<int>, MinTop> PQ2;
-    PQ2.push(1);
+    PQ2.push(2);
+    PQ2.push(2);
 
     while(!PQ2.empty())
     {
         cout << PQ2.top() << endl;
         PQ2.pop();
     }
+
+    cout << PQ2.size() << endl;
+    cout << "Top now points to " << PQ2.top() << endl; //?  How does PQ.top() still point to 2?
+    // Note: Trying get .top() in an empty PQ leads to undefined behavior
 
     /*
      * This is equivalent of priority_queue<int, vector<int>, less> pq;
