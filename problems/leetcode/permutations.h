@@ -1,5 +1,4 @@
-/* Sample Backtracking Template */
-#include "../../../debug.h"
+#include "../../debug.h"
 
 class Solution
 {
@@ -7,11 +6,19 @@ class Solution
 public:
     bool is_valid_state(vector<int> state, vector<int>& arr)
     {
+        return state.size() == arr.size();
     }
 
     vector<int> get_candidates(vector<int> state, vector<int>& arr)
     {
         vector<int> candidates = {};
+        for(auto c: arr)
+        {
+            if(find(state.begin(), state.end(), c) == state.end())
+            {
+                candidates.push_back(c);
+            }
+        }
         return candidates;
     }
 
@@ -38,8 +45,3 @@ public:
         return ans;
     }
 };
-
-int main()
-{
-    return 0;
-}
