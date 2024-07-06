@@ -1,3 +1,5 @@
+#include "../../debug.h"
+
 /* Creating a custom functor - object of this needs to be created */
 struct Compare
 {
