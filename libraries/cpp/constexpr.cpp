@@ -26,8 +26,8 @@ int main()
     int age{};
     std::cin >> age;
 
-    constexpr int myAge { age };      // compile error: age is not a constant expression
-    constexpr int f { five() };       // compile error: return value of five() is not a constant expression
+//    constexpr int myAge { age };      // compile error: age is not a constant expression
+//    constexpr int f { five() };       // compile error: return value of five() is not a constant expression
 
     return 0;
 }
