@@ -14,7 +14,7 @@
 
 
 #ifndef ONLINE_JUDGE
-#include "../../debug.h"
+#include "../../../debug.h"
 #else
 #include "bits/stdc++.h"
 #include <sys/stat.h>
@@ -35,37 +35,54 @@ inline bool fileExists (const std::string& name)
     return (stat (name.c_str(), &buffer) == 0);
 }
 
+template<typename T>
+void debug(const T& msg)
+{
+    if(fileExists("data.in"))
+        cout << msg << endl;
+}
+
+void debug2()
+{
+    if(fileExists("data.in"))
+        cout << string(25, '-') << endl;
+}
+
 
 void solve()
 {
-    int n, x;
-    cin >> n >> x;
-    vector<int> coins;
+    int n;
+    cin >> n;
+    vector<int> A;
     int val;
+    int total = 0;
+
     for(int i=0; i<n; i++)
     {
         cin >> val;
-        coins.push_back(val);
+        total += val;
+        A.push_back(val);
     }
 
-    vector<int> DP(x+1, 0);
-    DP[0] = 1;
+    int ans = INT32_MAX;
 
-    for(int wei=0; wei<=x; wei++)
+    for(int msk=0; msk <(1<<n); msk++)
     {
-        for(int i=1; i<=n; i++)
+        int current = 0;
+        for(int j=0; j<n; j++)
         {
-            if(wei - coins[i-1] >= 0)
+            if(msk & (1<<j))
             {
-                DP[wei] += DP[wei - coins[i-1]];
-                DP[wei] %= 1000000007;
+                current += A[j];
             }
         }
+
+        int other = total - current;
+        int diff = abs(current - other);
+        ans = min(ans, diff);
     }
 
-    int result = (DP[x] == 0) ? 0 : DP[x];
-    cout << result << endl;
-
+    cout << ans << endl;
 }
 
 int32_t main()
@@ -77,8 +94,7 @@ int32_t main()
     while(T--)
     {
         solve();
-        if(fileExists("data.in"))
-            cout << string(25, '-') << endl;
+        debug2();
     }
 
     auto stop = std::chrono::high_resolution_clock::now();

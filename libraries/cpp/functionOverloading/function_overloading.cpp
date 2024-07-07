@@ -14,6 +14,7 @@ double addDouble(double x, double y)
 // Each identically named function has different parameter types
 // Functions can be overloaded as long as they can be differentiated by the compiler
 // Compiler matches the overload -> This is called overload resolution
+// Return type of a function is not considered for differentiation
 // Note: Operators can also be overloaded
 
 int add(int x, int y)
