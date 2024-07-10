@@ -15,7 +15,7 @@ public:
                 f = prev + A[i][1];
                 w = f - A[i][0];
             }
-            else
+            elsep
             {
                 f = A[i][0] + A[i][1];
                 w = f - A[i][0];
