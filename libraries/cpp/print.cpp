@@ -35,3 +35,14 @@ void printVector(const std::vector<T>& vec) {
     }
     std::cout << "]" << std::endl;
 }
+
+// Template function to print a 2D vector
+template<typename T>
+void print2DVector(const std::vector<std::vector<T>>& vec) {
+    for (const auto& innerVec : vec) {
+        for (const auto& element : innerVec) {
+            std::cout << element << ' ';
+        }
+        std::cout << '\n';
+    }
+}
