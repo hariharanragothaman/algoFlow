@@ -1,13 +1,3 @@
-template<typename T>
-void print2DVector(const std::vector<std::vector<T>>& vec) {
-    for (const auto& innerVec : vec) {
-        for (const auto& element : innerVec) {
-            std::cout << element << ' ';
-        }
-        std::cout << '\n';
-    }
-}
-
 class Solution {
 public:
     int helper(vector<vector<int>>& G, int i, int j, int R, int C)
@@ -59,11 +49,8 @@ public:
             {
                 if(G[i][j] == 1)
                 {
-                    // cout << i << " " << j << endl;
                     int area = helper(G, i, j, R, C);
-                    // cout << "The area is " << area << endl;
                     islands = max(islands, area);
-                    // cout << "-----------" << endl;
                 }
             }
         }
