@@ -9,13 +9,6 @@ void printUnorderedMap(const std::unordered_map<K, V>& umap) {
     }
 }
 
-// Template function to print a map
-template <typename K, typename V>
-void printMap(const std::map<K, V>& map) {
-    for (const auto& pair : map) {
-        std::cout << "Key: " << pair.first << ", Value: " << pair.second << std::endl;
-    }
-}
 
 // Template function to print any associative container
 template <typename Container>
@@ -45,4 +38,9 @@ void print2DVector(const std::vector<std::vector<T>>& vec) {
         }
         std::cout << '\n';
     }
+}
+
+int main()
+{
+    return 0;
 }

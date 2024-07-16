@@ -1,4 +1,4 @@
-#include "../../debug.h"
+#include "../../../debug.h"
 
 void djikstra(vector<vector<int>> T, int n, int start)
 {
@@ -50,7 +50,8 @@ void djikstra(vector<vector<int>> T, int n, int start)
 
 int main()
 {
-    int times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, start = 2;
+    vector<vector<int>> times = {{2,1,1},{2,3,1},{3,4,1}};
+    int n = 4, start = 2;
     /* times is in the form of {u, v, w}
      * 'n' is the number of vertices
      * 'start' index is given
