@@ -15,7 +15,7 @@
 */
 
 #ifndef ONLINE_JUDGE
-#include "../debug.h"
+#include "../../debug.h"
 #else
 #include "bits/stdc++.h"
 #include <sys/stat.h>
