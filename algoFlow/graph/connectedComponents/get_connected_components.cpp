@@ -1,4 +1,4 @@
-#include "../../debug.h"
+#include "../../../debug.h"
 
 typedef  pair<int, int> pii;
 typedef vector< pii > vii;
