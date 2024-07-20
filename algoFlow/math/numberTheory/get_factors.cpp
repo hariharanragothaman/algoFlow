@@ -1,4 +1,4 @@
-#include "../../debug.h"
+#include "../../../debug.h"
 
 set<int> find_all_divisors(int n)
 {

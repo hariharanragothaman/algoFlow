@@ -1,4 +1,4 @@
-#include "../../debug.h"
+#include "../../../debug.h"
 
 const std::pair<int, int> moves[] = {{-1, 0}, {0, -1}, {0, 1}, {1, 0}};
 
