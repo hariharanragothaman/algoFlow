@@ -1,4 +1,4 @@
-#include "../../debug.h"
+#include "../../../debug.h"
 
 // Covers fundamental ideas about how to represent graphs in C++
 

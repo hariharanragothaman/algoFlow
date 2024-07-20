@@ -1,4 +1,4 @@
-#include "../../debug.h"
+#include "../../../debug.h"
 
 void basicGraph(vector<vi> &g)
 {

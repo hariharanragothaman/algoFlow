@@ -14,5 +14,5 @@ foreach(SOURCE_FILE ${SOURCES})
     # Create the executable
     add_executable(${TARGET_NAME} ${SOURCE_FILE})
     # Set the output directory for the executable
-    set_target_properties(${TARGET_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/output)
+    set_target_properties(${TARGET_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY /tmp/output)
 endforeach()
