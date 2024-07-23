@@ -45,7 +45,7 @@ public:
         for(int i=0; i<n; i++)
         {
             int val = word[i] - 'a';
-            if(current->children == NULL)
+            if(current->children[val] == NULL)
             {
                 return false;
             }
@@ -61,7 +61,7 @@ public:
         for(int i=0; i<n; i++)
         {
             int val = prefix[i] - 'a';
-            if(current->children == NULL)
+            if(current->children[val] == NULL)
             {
                 return false;
             }
