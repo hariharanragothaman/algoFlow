@@ -85,22 +85,30 @@ void quick_remove_at(std::vector<T> &A, std::size_t idx)
     }
 }
 
-
-void solve()
+class Solution
 {
+private:
 
-}
+public:
+    void solve()
+    {
+
+    }
+};
+
 
 int32_t main()
 {
     auto start = std::chrono::high_resolution_clock::now();
 
     FAST_IO();
-    int T;
-    cin >> T;
+    int T = 1;
+//    cin >> T;
+
+    Solution sol;
     while(T--)
     {
-        solve();
+        sol.solve();
         debug2();
     }
 
