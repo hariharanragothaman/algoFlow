@@ -60,9 +60,9 @@ void debug3()
 template <typename T>
 void print(std::vector<T> const &v)
 {
-for (auto i: v)
-cout << i << ' ';
-cout << endl;
+    for (auto i: v)
+        cout << i << ' ';
+    cout << endl;
 }
 
 template <typename T>
@@ -88,31 +88,6 @@ void quick_remove_at(std::vector<T> &A, std::size_t idx)
 
 void solve()
 {
-    int n;
-    cin >> n;
-    vector<int> A(n, 0);
-    for(int i=0; i<n; i++)
-        cin >> A[i];
-    sort(A.begin(), A.end());
-
-    int cnt = 0;
-    int mx = 0;
-    while(!A.empty())
-    {
-        auto node = A.back();
-        if(node >= mx)
-        {
-            A.pop_back();
-            mx = node;
-            cnt++;
-        }
-        else
-        {
-            break;
-        }
-    }
-    string ans = (cnt & 1) ? "YES" : "NO";
-    cout << ans << endl;
 
 }
 
