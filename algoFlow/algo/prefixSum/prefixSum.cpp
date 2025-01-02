@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std;
+#include "../../../debug.h"
 
 vector<int> prefixSum(vector<int> A)
 {
