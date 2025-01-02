@@ -1,6 +1,7 @@
 #include "../../../debug.h"
 using namespace std;
 
+
 vector<vector<int>> G;
 int nodes;
 int start;
