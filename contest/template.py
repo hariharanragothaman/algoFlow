@@ -28,7 +28,6 @@ from functools import reduce
 def solve() -> None:
     pass
 
-
 # endregion
 
 # region testcase
