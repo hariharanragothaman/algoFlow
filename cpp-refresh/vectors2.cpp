@@ -95,8 +95,44 @@ int main()
     std::cout << "After swap:\n";
     print(A1, "A1");
     print(B1, "B1");
+    cout << endl;
 
-    /* Algorithms on vectors - SEARCH OPERATIONS */
+    /********* SEARCH OPERATIONS **************/
+    vector<int> VV {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
+    /* all_of */
+    auto check_even = [](int c){return c % 2 == 0;};
+    bool all_of_flag = all_of(VV.begin(), VV.end(), check_even);
+    cout << "Are all numbers even? " << all_of_flag << endl;
+
+    /* any_of */
+    bool any_of_flag = any_of(VV.begin(), VV.end(), check_even);
+    cout << "Any of the numbers even? " << any_of_flag << endl;
+
+    auto equals_to_zero = [](int c) {return c == 0; };
+    bool none_of_flag = none_of(VV.begin(), VV.end(), equals_to_zero);
+    cout << "Are any numbers equal to zero? " << none_of_flag << endl;
+
+    /* find */
+    int needle = 7;
+    vector<int> haystack = {7, 5, 2, 1, 6};
+    if(find(haystack.begin(), haystack.end(), needle) == haystack.end())
+        cout << "Needle is not there in haystack" << endl;
+    else
+        cout << "Needle is there in haystack" << endl;
+
+    /* find_if */
+    auto it = find_if(haystack.begin(), haystack.end(), check_even);
+    if(it != haystack.end())
+        cout << "Found an even number" << endl;
+    else
+        cout << "Did not find an even number" << endl;
+
+    /* find_if_not */
+    auto it2 = find_if(haystack.begin(), haystack.end(), check_even);
+    if(it2 != haystack.end())
+        cout << "Found an odd number" << endl;
+    else
+        cout << "Did not find an odd number" << endl;
     return 0;
 }
