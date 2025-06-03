@@ -59,3 +59,8 @@ public:
         return A;
     }
 };
+
+int main()
+{
+    return 0;
+}

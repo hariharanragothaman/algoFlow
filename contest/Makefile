@@ -12,7 +12,7 @@ uname_p := $(shell uname -p)
 ifeq ($(uname_p),x86_64)
 	CXX := g++
 else ifeq ($(uname_p), arm)
-	CXX := g++-12
+	CXX := g++
 endif
 
 ifeq ($(lang),cpp)

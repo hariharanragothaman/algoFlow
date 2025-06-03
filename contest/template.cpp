@@ -90,8 +90,50 @@ class Solution
 private:
 
 public:
+    void merge_sort(vector<int>& A, int left, int right) {
+        if (right - left <= 1) return;
+
+        int mid = left + (right - left) / 2;
+        merge_sort(A, left, mid);
+        merge_sort(A, mid, right);
+
+        vector<int> temp;
+        int i = left, j = mid;
+
+        while (i < mid && j < right) {
+            if (A[i] <= A[j]) {
+                temp.push_back(A[i++]);
+            } else {
+                temp.push_back(A[j++]);
+            }
+        }
+
+        while (i < mid) temp.push_back(A[i++]);
+        while (j < right) temp.push_back(A[j++]);
+
+        for (int k = left; k < right; ++k) {
+            A[k] = temp[k - left];
+        }
+    }
+
     void solve()
     {
+        int n;
+        cin >> n;
+        vector<int> A;
+        int x;
+        for(int i=0; i<n; i++)
+        {
+            cin >> x;
+            A.push_back(x);
+        }
+        merge_sort(A, 0, A.size());
+
+        for(auto c: A)
+        {
+            cout << c << " ";
+        }
+        cout << endl;
 
     }
 };

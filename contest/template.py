@@ -26,7 +26,10 @@ from functools import reduce
 # region solution
 
 def solve() -> None:
-    pass
+    n = input()
+    A = input_as_array()
+    print(~5)
+
 
 # endregion
 

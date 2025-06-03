@@ -3,12 +3,12 @@
 vector<int> prefixSum(vector<int> A)
 {
     int n = A.size();
-    vector<int> PS(n+1, 0);
-    for(int i=1; i< PS.size(); i++)
+    vector<int> PS(n+1, 0)SSCS
+    for(int i=1; i < PS.size(); i++)
     {
         PS[i] = PS[i-1] + A[i-1];
     }
-    return A
+    return PS;
 }
 
 int main()
@@ -17,6 +17,11 @@ int main()
     vector<int> PS_T = prefixSum(T);
     // We are assuming zero-indexing, hence to find sum between start and end
     int start  = 2, end = 4;
+    for(auto c: PS_T)
+    {
+        cout << c << " ";
+    }
+    cout << endl;
     int ans = PS_T[end+1] - PS_T[start];
     cout << "The answer is: " << ans << endl;
 }
