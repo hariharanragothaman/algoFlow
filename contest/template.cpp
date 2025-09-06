@@ -57,83 +57,30 @@ void debug3()
     cout <<  string(25, '*') << endl;
 }
 
-template <typename T>
-void print(std::vector<T> const &v)
-{
-    for (auto i: v)
-        cout << i << ' ';
-    cout << endl;
-}
 
-template <typename T>
-void quick_remove_at(vector<T> &A, typename vector<T> ::iterator it)
-{
-    if(it != end(A))
-    {
-        *it = move(A.back());
-        A.pop_back();
-    }
-}
-
-template <typename T>
-void quick_remove_at(std::vector<T> &A, std::size_t idx)
-{
-    if (idx < A.size())
-    {
-        A[idx] = std::move(A.back());
-        A.pop_back();
-    }
-}
 
 class Solution
 {
 private:
 
 public:
-    void merge_sort(vector<int>& A, int left, int right) {
-        if (right - left <= 1) return;
-
-        int mid = left + (right - left) / 2;
-        merge_sort(A, left, mid);
-        merge_sort(A, mid, right);
-
-        vector<int> temp;
-        int i = left, j = mid;
-
-        while (i < mid && j < right) {
-            if (A[i] <= A[j]) {
-                temp.push_back(A[i++]);
-            } else {
-                temp.push_back(A[j++]);
-            }
-        }
-
-        while (i < mid) temp.push_back(A[i++]);
-        while (j < right) temp.push_back(A[j++]);
-
-        for (int k = left; k < right; ++k) {
-            A[k] = temp[k - left];
-        }
-    }
-
     void solve()
     {
+        int one_side = 4;
+        int support = 4; // to join to sides.
+        int one_cube = 2 * one_side + support;
+        /*
+         *
+         * for n cubes joineed t- there will be n-1 supports
+         * 1 cube  = 2 sides + 1 join
+         * 2 cubes = 3 sides + 2 join
+         * 3 cubes = 4 sides + 3 join
+         *
+         * n cubes = n+1 sides + (n-1) join
+         */
         int n;
         cin >> n;
-        vector<int> A;
-        int x;
-        for(int i=0; i<n; i++)
-        {
-            cin >> x;
-            A.push_back(x);
-        }
-        merge_sort(A, 0, A.size());
-
-        for(auto c: A)
-        {
-            cout << c << " ";
-        }
-        cout << endl;
+        cout << ((n+1) * 4) + ((n)*4) << endl;
 
     }
 };

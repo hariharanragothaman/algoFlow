@@ -4,7 +4,7 @@ using namespace std;
 
 bool checkPalindrome(string s)
 {
-    return s == string(s.rbegin(), s.rend()) ? true : false;
+    return s == string(s.rbegin(), s.rend());
 }
 
 bool check_palindrome2(string s)
