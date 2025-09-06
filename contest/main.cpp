@@ -50,6 +50,13 @@ int32_t main()
     auto start = std::chrono::high_resolution_clock::now();
 
     FAST_IO();
+
+#ifndef ONLINE_JUDGE
+    if (fileExists("data.in")) {
+        freopen("data.in", "r", stdin);
+        freopen("data.out", "w", stdout);
+    }
+#endif
     int T = 1;
 //    cin >> T;
 
@@ -58,5 +65,13 @@ int32_t main()
     {
         sol.solve();
     }
+#ifndef ONLINE_JUDGE
+    if (fileExists("data.in")) {
+        auto stop = std::chrono::high_resolution_clock::now();
+        auto us   = std::chrono::duration_cast<std::chrono::microseconds>(stop - start).count();
+        cerr << "Time taken: " << us << " μs\n";
+    }
+#endif
+
     return 0;
 }
