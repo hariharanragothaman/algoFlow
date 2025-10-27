@@ -35,9 +35,9 @@ def solve() -> None:
 
 # region testcase
 def main() -> None:
-    if os.path.exists("data.in"):
-        sys.stdin = open("data.in", "r")
-        sys.stdout = open("data.out", "w")
+    if os.path.exists("../data.in"):
+        sys.stdin = open("../data.in", "r")
+        sys.stdout = open("../data.out", "w")
 
     start_time = time.time()
     testcases = int(input())
@@ -46,7 +46,7 @@ def main() -> None:
         solve()
         debug('-')
 
-    if os.path.exists("data.in"):
+    if os.path.exists("../data.in"):
         print(f"Time Elapsed: {time.time() - start_time} seconds")
         sys.stdout.close()
 
@@ -60,12 +60,12 @@ def input_as_array() -> list[int]:
 
 
 def debug(char) -> None:
-    if os.path.exists("data.in"):
+    if os.path.exists("../data.in"):
         print(char * 25)
 
 
 def debug2(value) -> None:
-    if os.path.exists("data.in"):
+    if os.path.exists("../data.in"):
         print(value)
 
 

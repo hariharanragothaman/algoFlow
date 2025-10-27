@@ -24,27 +24,27 @@ BUFSIZE = 8192
 
 
 def debug():
-    if os.path.exists("data.in"):
+    if os.path.exists("../data.in"):
         print("*" * 10)
 
 
 def debug2(value):
-    if os.path.exists("data.in"):
+    if os.path.exists("../data.in"):
         print(value)
 
 
 def debug3():
-    if os.path.exists("data.in"):
+    if os.path.exists("../data.in"):
         print("-" * 10)
 
 
 def debug4(msg, value):
-    if os.path.exists("data.in"):
+    if os.path.exists("../data.in"):
         print(msg, value)
 
 
 def debug5(msg):
-    if os.path.exists("data.in"):
+    if os.path.exists("../data.in"):
         print(msg)
 
 
@@ -54,9 +54,9 @@ class Solution:
 
 
 if __name__ == "__main__":
-    if os.path.exists("data.in"):
-        sys.stdin = open("data.in", "r")
-        sys.stdout = open("data.out", "w")
+    if os.path.exists("../data.in"):
+        sys.stdin = open("../data.in", "r")
+        sys.stdout = open("../data.out", "w")
 
     start_time = time.time()
     s = Solution()
@@ -69,6 +69,6 @@ if __name__ == "__main__":
     print(ans)
 
     # If it's local - Print this O/P
-    if os.path.exists("data.in"):
+    if os.path.exists("../data.in"):
         print(f"Time Elapsed: {time.time() - start_time} seconds")
         sys.stdout.close()
