@@ -1,6 +1,8 @@
-#include "../../../debug.h"
+#include "../headers.h"
 
-
+/*
+ *  Get all prime numbers upto a given number n
+ */
 vector<i64> sieve(int n)
 {
     vector<int> arr(n + 1, 0);
@@ -16,9 +18,4 @@ vector<i64> sieve(int n)
             primes.push_back(i);
 
     return primes;
-}
-
-int main()
-{
-    return 0;
 }

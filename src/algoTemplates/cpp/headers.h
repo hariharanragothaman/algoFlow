@@ -89,4 +89,22 @@
 using namespace std;
 
 
+using i64 = long long;
+using u64 = unsigned long long;
+using i32 = int;
+using u32 = unsigned int;
+using ld  = long double;
+//--------------------------
+using vi   = vector<int>;
+using vl   = vector<long long>;
+using vvi  = vector<vector<int>>;
+using vvl  = vector<vector<long long>>;
+using pii  = pair<int,int>;
+using pll  = pair<long long,long long>;
+using vpii = vector<pii>;
+using vpll = vector<pll>;
+using iset = set<int>;
+using imap = map<int,int>;
+//--------------------------
+
 #endif //ALGOFLOW_HEADERS_H
