@@ -1,6 +1,4 @@
-#include "../../../debug.h"
-using namespace std;
-
+#include "headers.h"
 /*
  *  Reference: https://codeforces.com/blog/entry/96699
  *  1. The main idea behind binary search is linear-reduction of search space.

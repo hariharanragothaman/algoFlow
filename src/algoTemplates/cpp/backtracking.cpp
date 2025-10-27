@@ -1,5 +1,4 @@
-/* Sample Backtracking Template */
-#include "../../../debug.h"
+#include "headers.h"
 
 class Solution
 {
