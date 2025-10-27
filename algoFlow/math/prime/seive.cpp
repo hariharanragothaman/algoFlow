@@ -1,22 +1,20 @@
 #include "../../../debug.h"
 
 
-vector<int> sieve(int n)
+vector<i64> sieve(int n)
 {
-    vector<bool> is_prime(n + 1, true);
-    is_prime[0] = is_prime[1] = false;
-    for (int i = 2; i <= n; i++) {
-        if (is_prime[i] && (long long)i * i <= n) {
+    vector<int> arr(n + 1, 0);
+    vector<i64> primes;
+
+    for (int i = 2; i * i <= n; i++)
+        if (arr[i] == 0)
             for (int j = i * i; j <= n; j += i)
-                is_prime[j] = false;
-        }
-    }
-    vector<int> primes;
-    for (int i = 2; i <= n; ++i)
-    {
-        if (is_prime[i])
+                arr[j] = 1;
+
+    for (int i = 2; i <= n; i++)
+        if (arr[i] == 0)
             primes.push_back(i);
-    }
+
     return primes;
 }
 
