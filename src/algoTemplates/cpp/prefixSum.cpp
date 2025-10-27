@@ -1,9 +1,9 @@
-#include "../../../debug.h"
+#include "headers.h"
 
 vector<int> prefixSum(vector<int> A)
 {
     int n = A.size();
-    vector<int> PS(n+1, 0)SSCS
+    vector<int> PS(n+1, 0)
     for(int i=1; i < PS.size(); i++)
     {
         PS[i] = PS[i-1] + A[i-1];
