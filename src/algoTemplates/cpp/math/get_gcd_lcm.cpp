@@ -1,4 +1,4 @@
-#include "../../../debug.h"
+#include "../headers.h"
 
 int GCD(int a, int b)
 {

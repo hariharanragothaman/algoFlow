@@ -1,4 +1,4 @@
-#include "../../debug.h"
+#include "../headers.h"
 
 string toBaseK(int n, int k)
 {

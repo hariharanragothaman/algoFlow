@@ -1,4 +1,4 @@
-#include "../../debug.h"
+#include "../headers.h"
 
 int main()
 {

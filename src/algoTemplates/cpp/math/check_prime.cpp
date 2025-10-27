@@ -1,4 +1,4 @@
-#include "../../../debug.h"
+#include "../headers.h"
 
 
 bool prime(int n)

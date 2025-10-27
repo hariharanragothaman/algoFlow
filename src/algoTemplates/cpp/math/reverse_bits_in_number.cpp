@@ -1,4 +1,4 @@
-#include "../../debug.h"
+#include "../headers.h"
 
 unsigned int reverseBits(unsigned int num)
 {
