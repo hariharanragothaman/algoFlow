@@ -38,7 +38,7 @@ Paint House (with color constraints)	Extended version where adjacency means “s
 Maximum points from tasks with cooldown	Cooldown creates the same dependency gap
 Weighted interval scheduling	Sort by end times, choose dp[i-1] or dp[p[i]] + val[i] — generalization of House Robber
 
- 198. House Robber — the base template.
+198. House Robber — the base template.
 213. House Robber II — same, but array is circular → handle first/last separately.
 337. House Robber III — houses on a tree → same idea with tree DP (take node ⇒ skip children).
 740. Delete and Earn — compress counts to val[x] = x*cnt[x], then run House Robber on x.
@@ -50,6 +50,8 @@ Codeforces (perfect matches & close cousins)
 455A – Boredom — exact same as Delete & Earn / House Robber on values.
 607A – Chain Reaction — pick towers; destroying one removes a range around it → sort + “take or skip” with predecessor index (weighted scheduling flavor).
 Edu DP – Task W (Intervals) — classic weighted interval scheduling (the generalized template).
+
+
 How to map them (mental guide)
 Line with adjacent ban → dp[i] = max(dp[i-1], dp[i-2] + val[i]).
 Circular line → solve twice: [0..n-2] and [1..n-1], take max.
