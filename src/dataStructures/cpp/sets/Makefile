@@ -1,6 +1,6 @@
 # Compiler and flags
 CXX := g++
-CXXFLAGS := -std=c++17 -Wall -Wextra
+CXXFLAGS := -std=c++23 -Wall -Wextra
 
 # Specify the source directory and output directories
 SRC_DIR := algoFlow
